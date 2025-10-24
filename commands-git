@@ -1,8 +1,19 @@
-git clone https://github.com/elyes-messaadia/git-begins.git
-git init
-git status
-cd git-begins; git add commands-git
-git add . / git remote -v
-git branch --show current
-git commit -m "add commands-git file"
-git push -u origin master
+git clone https://github.com/elyes-messaadia/git-begins.git  # clone le dépôt distant en local
+git init  # initialise un dépôt Git dans le répertoire courant
+git status  # affiche l'état des fichiers (modifiés, non suivis, indexés)
+git fetch  # récupère les mises à jour du dépôt distant sans fusionner
+git pull  # récupère et fusionne (ou rebase) les changements depuis le remote
+cd git-begins; git add commands-git  # se place dans le dossier et ajoute le fichier commands-git à l'index
+git add .  # ajoute tous les fichiers modifiés/staged à l'index
+git remote -v  # affiche les dépôts distants et leurs URLs
+git branch --show current  # affiche la branche courante (usage recommandé : --show-current)
+git commit -m "add commands-git file"  # crée un commit avec le message fourni
+git push -u origin master  # pousse la branche master vers origin et définit l'upstream
+
+# Branches
+git branch "nom-de-la-branche"  # crée une nouvelle branche locale (ne bascule pas dessus)
+git branch -b "nom-de-la-branche"  # (non standard) intention : créer et basculer — utiliser git checkout -b ou git switch -c
+git switch "nom-de-la-branche"  # basculer vers une branche existante (nouvelle syntaxe)
+git checkout "nom-de-la-branche"  # basculer vers une branche existante (ancienne syntaxe)
+git branch  # lister toutes les branches locales
+git branch -d "nom-de-la-branche"  # supprimer une branche locale (utiliser -D pour forcer)
