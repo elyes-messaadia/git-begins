@@ -1,7 +1,8 @@
 git clone https://github.com/elyes-messaadia/git-begins.git
 git init
 git status
+cd git-begins; git add commands-git
 git add . / git remote -v
 git branch --show current
-git commit -m "First commit"
+git commit -m "add commands-git file"
 git push -u origin master
