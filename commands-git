@@ -1,0 +1,7 @@
+git clone https://github.com/elyes-messaadia/git-begins.git
+git init
+git status
+git add . / git remote -v
+git branch --show current
+git commit -m "First commit"
+git push -u origin master
